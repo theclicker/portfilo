@@ -1,0 +1,54 @@
+{
+  "_instructions": "Update this file every week with your latest stats. Save it, then refresh the site.",
+  "lastUpdated": "2026-06-03",
+
+  "overview": {
+    "totalFollowers": 188800,
+    "brandCollabs": 30,
+    "organicSeriesViews": "4M+"
+  },
+
+  "tiktok": {
+    "followers": 140600,
+    "engagementRate": 11.6,
+    "avgViewsPerVideo": 9300,
+    "avgLikesPerVideo": 1600,
+    "avgCommentsPerVideo": 154,
+    "creatorRank": "Top 25%"
+  },
+
+  "instagram": {
+    "followers": 48200,
+    "engagementRate": 8.1
+  },
+
+  "audience": {
+    "genderFemale": 68,
+    "genderMale": 32,
+    "ageBreakdown": {
+      "13-17": 8,
+      "18-24": 45,
+      "25-34": 32,
+      "35-44": 10,
+      "45+": 5
+    },
+    "topCountries": [
+      { "flag": "🇬🇧", "name": "United Kingdom", "percent": 62 },
+      { "flag": "🇺🇸", "name": "United States",  "percent": 18 },
+      { "flag": "🇩🇪", "name": "Germany",         "percent": 8  },
+      { "flag": "🇨🇦", "name": "Canada",          "percent": 6  },
+      { "flag": "🇳🇱", "name": "Netherlands",     "percent": 4  }
+    ]
+  },
+
+  "ticker": {
+    "combinedFollowers": "188.8K",
+    "tiktokEngagement": "11.6%",
+    "avgViewsPerVideo": "9.3K",
+    "creatorRank": "Top 25%",
+    "femaleAudience": "68%",
+    "brandCollabs": "30+",
+    "organicSeriesViews": "4M+",
+    "featuredBrands": "BBC · Formula 1 · ASUS · Trip.com"
+  }
+}
