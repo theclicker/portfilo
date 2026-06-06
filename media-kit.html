@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>James Hagen — Media Kit 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700;1,9..144,900&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"/>
+<style>
+:root{
+  --bg:#F6F3EC;--bg2:#FFFFFF;--bg3:#EDE8DD;--bg-dark:#0E0B07;
+  --ink:#0E0B07;--ink2:#6B6055;--ink3:#B0A494;
+  --gold:#C29030;--gold-l:#D8A840;--gold-d:rgba(194,144,48,.10);--gold-b:rgba(194,144,48,.22);
+  --teal:#1A8B7B;--teal-d:rgba(26,139,123,.10);--teal-l:#22A890;
+  --border:rgba(14,11,7,.07);--border-g:rgba(194,144,48,.20);
+  --r:7px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:13.5px;background:var(--bg3)}
+body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line-height:1.5}
+
+/* ── Print button ── */
+.print-btn{
+  position:fixed;top:1.2rem;right:1.2rem;z-index:99;
+  background:var(--ink);color:var(--bg);border:none;cursor:pointer;
+  padding:.6rem 1.3rem;border-radius:6px;
+  font-family:'Space Mono',monospace;font-size:.6rem;
+  letter-spacing:.12em;text-transform:uppercase;transition:all .2s;
+}
+.print-btn:hover{background:var(--gold);color:#000}
+@media print{.print-btn{display:none}
+  html,body{background:#fff}
+  .page{margin:0;box-shadow:none}
+}
+
+/* ── Page ── */
+.page{
+  width:210mm;min-height:297mm;
+  background:var(--bg);margin:1rem auto;
+  padding:0 0 8mm;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+  box-shadow:0 8px 60px rgba(0,0,0,.14);
+}
+
+/* ── Grain ── */
+.page::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
+  opacity:.5;
+}
+
+/* ── HEADER BAND ── */
+.header-band{
+  background:var(--ink);padding:7mm 12mm 7mm;
+  position:relative;overflow:hidden;flex-shrink:0;
+}
+/* Ghost number */
+.header-band::after{
+  content:"188K";
+  position:absolute;right:-4mm;bottom:-6mm;
+  font-family:'Fraunces',serif;font-style:italic;font-weight:900;
+  font-size:52mm;line-height:1;
+  color:rgba(255,255,255,.04);letter-spacing:-.05em;
+  pointer-events:none;user-select:none;
+}
+.hb-inner{
+  display:grid;grid-template-columns:1fr auto;
+  gap:6mm;align-items:flex-end;position:relative;z-index:1;
+}
+.hb-eyebrow{
+  font-family:'Space Mono',monospace;font-size:.52rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:2.5mm;
+}
+.hb-name{
+  font-family:'Fraunces',serif;font-size:4.2rem;font-weight:900;
+  line-height:.82;letter-spacing:-.05em;color:#fff;
+}
+.hb-name .thin{display:block;font-weight:300;font-style:italic;color:var(--gold)}
+.hb-meta{
+  margin-top:3mm;display:flex;align-items:center;
+  gap:5mm;flex-wrap:wrap;
+}
+.hb-tag{
+  font-family:'Space Mono',monospace;font-size:.52rem;
+  letter-spacing:.08em;color:rgba(255,255,255,.45);
+}
+.hb-dot{color:rgba(255,255,255,.18)}
+
+.hb-stat{text-align:right;flex-shrink:0}
+.hb-num{
+  font-family:'Fraunces',serif;font-weight:700;font-style:italic;
+  font-size:4rem;line-height:.85;color:var(--gold);letter-spacing:-.05em;
+}
+.hb-lbl{
+  font-family:'Space Mono',monospace;font-size:.5rem;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);margin-top:1.5mm;
+}
+.hb-sub{font-size:.56rem;color:rgba(255,255,255,.25);margin-top:.5mm}
+
+/* Gradient rule */
+.grad-rule{
+  height:3px;flex-shrink:0;
+  background:linear-gradient(90deg,var(--gold),var(--teal-l),var(--gold));
+}
+
+/* ── STATS BAND ── */
+.stats-band{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  margin:0;gap:0;
+  background:var(--border);border-bottom:1px solid var(--border);
+  flex-shrink:0;
+}
+.sb-stat{
+  background:var(--bg2);padding:4mm 5mm;
+  border-right:1px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+}
+.sb-stat:last-child{border-right:none}
+.sb-num{
+  font-family:'Fraunces',serif;font-weight:700;font-style:italic;
+  font-size:1.7rem;line-height:1;color:var(--ink);letter-spacing:-.03em;
+}
+.sb-num .a{color:var(--gold)}
+.sb-lbl{
+  font-family:'Space Mono',monospace;font-size:.48rem;
+  letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink2);margin-top:.8mm;
+}
+.sb-sub{font-size:.5rem;color:var(--ink3);margin-top:.4mm}
+
+/* ── Body ── */
+.body{padding:7mm 12mm 0;flex:1;display:flex;flex-direction:column;gap:0;position:relative;z-index:1}
+
+/* ── Section label ── */
+.sec{
+  font-family:'Space Mono',monospace;font-size:.5rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  display:flex;align-items:center;gap:6px;margin-bottom:3.5mm;
+}
+.sec::after{content:"";flex:1;height:1px;background:var(--border-g)}
+
+/* ── Platform cards ── */
+.platforms{display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:6mm}
+.plat{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:4mm;position:relative;overflow:hidden;
+}
+.plat::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.plat.ig::before{background:linear-gradient(90deg,#f09433,#dc2743 50%,transparent)}
+.plat-hd{
+  display:flex;align-items:center;gap:2.5mm;
+  margin-bottom:3mm;padding-bottom:3mm;border-bottom:1px solid var(--border);
+}
+.plat-ico{
+  width:26px;height:26px;border-radius:5px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.plat-ico.tt{background:#010101}
+.plat-ico.ig{background:linear-gradient(135deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888)}
+.plat-nm{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.plat-hn{font-size:.54rem;color:var(--ink3);margin-top:.4mm}
+.sr{display:flex;justify-content:space-between;align-items:baseline;padding:1.5mm 0;border-bottom:1px solid rgba(14,11,7,.04)}
+.sr:last-child{border-bottom:none}
+.sl{font-size:.6rem;color:var(--ink2)}
+.sv{font-family:'Fraunces',serif;font-size:1rem;font-weight:700}
+.sv.g{color:var(--gold)}.sv.t{color:var(--teal)}
+
+/* ── Audience three-col ── */
+.aud3{display:grid;grid-template-columns:1.05fr 1fr .95fr;gap:3mm;margin-bottom:6mm}
+.abox{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:4mm;
+}
+.abox-lbl{
+  font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink2);margin-bottom:2.5mm;
+}
+
+/* Gender split */
+.g-bar{display:flex;border-radius:3px;overflow:hidden;height:6px;margin-bottom:1.5mm}
+.g-f{background:var(--gold)}
+.g-m{background:var(--ink3)}
+.g-labels{display:flex;justify-content:space-between;margin-bottom:2.5mm}
+.g-lbl{font-size:.56rem;font-weight:600}
+.g-lbl small{display:block;font-size:.48rem;font-weight:400;color:var(--ink3);font-family:'Space Mono',monospace}
+.g-lbl.f small{color:var(--gold)}
+
+/* Age bars */
+.age-rows{display:grid;gap:1.5mm}
+.ar{display:flex;align-items:center;gap:1.5mm}
+.ar-lbl{font-family:'Space Mono',monospace;font-size:.48rem;color:var(--ink2);min-width:10mm}
+.ar-track{flex:1;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.ar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l))}
+.ar-pct{font-family:'Space Mono',monospace;font-size:.48rem;color:var(--gold);min-width:7mm;text-align:right}
+
+/* Geo bars */
+.geo-rows{display:grid;gap:1.8mm}
+.gr{display:flex;align-items:center;gap:2mm}
+.gr-flag{font-size:.72rem;flex-shrink:0}
+.gr-name{font-size:.56rem;font-weight:500;min-width:17mm}
+.gr-track{flex:1;height:2.5px;background:var(--border);border-radius:2px;overflow:hidden}
+.gr-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--teal-l))}
+.gr-pct{font-family:'Space Mono',monospace;font-size:.5rem;color:var(--teal);min-width:7mm;text-align:right}
+
+/* Content pillars */
+.pillar-rows{display:grid;gap:1.5mm;margin-bottom:3mm}
+.pillar{
+  display:flex;align-items:center;gap:2mm;
+  padding:1.5mm 0;border-bottom:1px solid var(--border);
+}
+.pillar:last-child{border-bottom:none}
+.pillar-bar{width:3px;height:13px;border-radius:2px;flex-shrink:0}
+.pillar-nm{font-size:.6rem;font-weight:500}
+.pillar-stat{
+  background:var(--gold-d);border:1px solid var(--border-g);border-radius:5px;
+  padding:2mm 2.5mm;text-align:center;margin-top:auto;
+}
+.pillar-stat-n{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--gold);line-height:1}
+.pillar-stat-l{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-top:.5mm}
+
+/* ── Campaign cards ── */
+.camps{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-bottom:6mm}
+.camp{
+  background:var(--bg-dark);border-radius:var(--r);padding:4mm;
+  position:relative;overflow:hidden;display:flex;flex-direction:column;gap:1.5mm;
+}
+.camp::after{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:2.5px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+}
+.camp.feat::after{background:linear-gradient(90deg,var(--gold-l),var(--gold),var(--gold-l))}
+.camp-brand{
+  font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);
+}
+.camp-title{
+  font-family:'Fraunces',serif;font-size:.9rem;font-weight:700;line-height:1.15;color:#fff;
+}
+.camp-num{
+  font-family:'Fraunces',serif;font-size:2rem;font-weight:900;font-style:italic;
+  color:var(--gold);line-height:1;margin-top:1mm;
+}
+.camp-sub{font-size:.52rem;color:rgba(255,255,255,.4)}
+.camp-pill{
+  display:inline-flex;align-items:center;margin-top:auto;
+  padding:.8mm 2mm;border-radius:100px;
+  background:rgba(194,144,48,.14);
+  font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--gold);width:fit-content;
+}
+
+/* ── Brands ── */
+.brands-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  gap:1px;background:var(--border);
+  border:1px solid var(--border);border-radius:var(--r);overflow:hidden;
+  margin-bottom:6mm;
+}
+.bc{
+  background:var(--bg2);padding:3mm 1.5mm;
+  text-align:center;font-size:.52rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink3);
+}
+.bc.f{color:var(--ink)}
+
+/* ── Services ── */
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-bottom:6mm}
+.svc{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:3.5mm;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;gap:1.5mm;
+}
+.svc::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--teal);
+}
+.svc-nm{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.svc-desc{font-size:.56rem;color:var(--ink2);line-height:1.5;flex:1}
+.svc-cta{font-family:'Space Mono',monospace;font-size:.48rem;color:var(--ink3);margin-top:auto}
+
+/* ── Contact ── */
+.contact-bar{
+  background:var(--bg-dark);border-radius:var(--r);padding:5mm 6mm;
+  display:flex;align-items:center;justify-content:space-between;gap:4mm;
+  margin-bottom:5mm;
+}
+.c-items{display:flex;gap:7mm;flex-wrap:wrap}
+.c-lbl{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.5mm}
+.c-val{font-size:.6rem;font-weight:500;color:#fff}
+.c-cta{text-align:right;flex-shrink:0}
+.c-cta-lbl{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1mm}
+.c-cta-val{font-family:'Fraunces',serif;font-size:.9rem;font-style:italic;color:var(--gold)}
+
+/* ── Footer ── */
+.foot{display:flex;justify-content:space-between;align-items:center}
+.foot-copy{font-family:'Space Mono',monospace;font-size:.46rem;color:var(--ink3);letter-spacing:.05em}
+.foot-at{font-family:'Fraunces',serif;font-size:.85rem;font-style:italic;color:var(--gold);letter-spacing:-.02em}
+
+/* ── Divider ── */
+.div{height:1px;background:var(--border);margin-bottom:5mm}
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">&#8595; Save as PDF</button>
+
+<div class="page">
+
+  <!-- HEADER BAND -->
+  <div class="header-band">
+    <div class="hb-inner">
+      <div>
+        <div class="hb-eyebrow">Lifestyle Creator &nbsp;&#183;&nbsp; Media Kit 2025</div>
+        <div class="hb-name">
+          James
+          <span class="thin">Hagen</span>
+        </div>
+        <div class="hb-meta">
+          <span class="hb-tag">@james_hagen</span>
+          <span class="hb-dot">&#183;</span>
+          <span class="hb-tag">@james_hagen08</span>
+          <span class="hb-dot">&#183;</span>
+          <span class="hb-tag">Durham, UK</span>
+          <span class="hb-dot">&#183;</span>
+          <span class="hb-tag">Open to Collabs</span>
+        </div>
+      </div>
+      <div class="hb-stat">
+        <div class="hb-num">188.8K</div>
+        <div class="hb-lbl">Combined Followers</div>
+        <div class="hb-sub">TikTok + Instagram</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRADIENT RULE -->
+  <div class="grad-rule"></div>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="sb-stat">
+      <div class="sb-num"><span class="a">140.6K</span></div>
+      <div class="sb-lbl">TikTok Followers</div>
+      <div class="sb-sub">@james_hagen</div>
+    </div>
+    <div class="sb-stat">
+      <div class="sb-num"><span class="a">11.6%</span></div>
+      <div class="sb-lbl">TikTok Engagement</div>
+      <div class="sb-sub">Top 25% Creator</div>
+    </div>
+    <div class="sb-stat">
+      <div class="sb-num"><span class="a">9.3K</span></div>
+      <div class="sb-lbl">Avg Views / Video</div>
+      <div class="sb-sub">TikTok Average</div>
+    </div>
+    <div class="sb-stat">
+      <div class="sb-num"><span class="a">48.2K</span></div>
+      <div class="sb-lbl">Instagram Followers</div>
+      <div class="sb-sub">@james_hagen08</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- PLATFORMS -->
+    <div class="div" style="margin-top:5mm"></div>
+    <div class="sec">Platform Performance</div>
+    <div class="platforms">
+
+      <div class="plat">
+        <div class="plat-hd">
+          <div class="plat-ico tt">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+          </div>
+          <div><div class="plat-nm">TikTok</div><div class="plat-hn">@james_hagen</div></div>
+        </div>
+        <div class="sr"><span class="sl">Followers</span><span class="sv g">140,600</span></div>
+        <div class="sr"><span class="sl">Engagement Rate</span><span class="sv g">11.6%</span></div>
+        <div class="sr"><span class="sl">Average Views</span><span class="sv">9,300</span></div>
+        <div class="sr"><span class="sl">Average Likes</span><span class="sv">1,600</span></div>
+        <div class="sr"><span class="sl">Creator Rank</span><span class="sv t">Top 25%</span></div>
+      </div>
+
+      <div class="plat ig">
+        <div class="plat-hd">
+          <div class="plat-ico ig">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          <div><div class="plat-nm">Instagram</div><div class="plat-hn">@james_hagen08</div></div>
+        </div>
+        <div class="sr"><span class="sl">Followers</span><span class="sv g">48,200</span></div>
+        <div class="sr"><span class="sl">Engagement Rate</span><span class="sv g">8.1%</span></div>
+        <div class="sr"><span class="sl">Female Audience</span><span class="sv">68%</span></div>
+        <div class="sr"><span class="sl">Primary Age</span><span class="sv">18&#8211;34</span></div>
+        <div class="sr"><span class="sl">Key Markets</span><span class="sv t">UK &middot; US &middot; DE</span></div>
+      </div>
+
+    </div>
+
+    <!-- AUDIENCE -->
+    <div class="sec">Audience Demographics</div>
+    <div class="aud3">
+
+      <!-- Gender + Age -->
+      <div class="abox">
+        <div class="abox-lbl">Gender Split</div>
+        <div class="g-bar"><div class="g-f" style="width:68%"></div><div class="g-m" style="width:32%"></div></div>
+        <div class="g-labels" style="margin-bottom:3.5mm">
+          <div class="g-lbl f">68%<small>Female</small></div>
+          <div class="g-lbl" style="text-align:right">32%<small>Male</small></div>
+        </div>
+        <div class="abox-lbl">Age Distribution</div>
+        <div class="age-rows">
+          <div class="ar"><span class="ar-lbl">13&#8211;17</span><div class="ar-track"><div class="ar-fill" style="width:8%"></div></div><span class="ar-pct">8%</span></div>
+          <div class="ar"><span class="ar-lbl">18&#8211;24</span><div class="ar-track"><div class="ar-fill" style="width:45%"></div></div><span class="ar-pct">45%</span></div>
+          <div class="ar"><span class="ar-lbl">25&#8211;34</span><div class="ar-track"><div class="ar-fill" style="width:32%"></div></div><span class="ar-pct">32%</span></div>
+          <div class="ar"><span class="ar-lbl">35&#8211;44</span><div class="ar-track"><div class="ar-fill" style="width:10%"></div></div><span class="ar-pct">10%</span></div>
+          <div class="ar"><span class="ar-lbl">45+</span><div class="ar-track"><div class="ar-fill" style="width:4%"></div></div><span class="ar-pct">4%</span></div>
+        </div>
+      </div>
+
+      <!-- Geo -->
+      <div class="abox">
+        <div class="abox-lbl">Top Countries</div>
+        <div class="geo-rows">
+          <div class="gr"><span class="gr-flag">&#127468;&#127463;</span><span class="gr-name">United Kingdom</span><div class="gr-track"><div class="gr-fill" style="width:62%"></div></div><span class="gr-pct">62%</span></div>
+          <div class="gr"><span class="gr-flag">&#127482;&#127480;</span><span class="gr-name">United States</span><div class="gr-track"><div class="gr-fill" style="width:18%"></div></div><span class="gr-pct">18%</span></div>
+          <div class="gr"><span class="gr-flag">&#127465;&#127466;</span><span class="gr-name">Germany</span><div class="gr-track"><div class="gr-fill" style="width:8%"></div></div><span class="gr-pct">8%</span></div>
+          <div class="gr"><span class="gr-flag">&#127464;&#127462;</span><span class="gr-name">Canada</span><div class="gr-track"><div class="gr-fill" style="width:6%"></div></div><span class="gr-pct">6%</span></div>
+          <div class="gr"><span class="gr-flag">&#127475;&#127473;</span><span class="gr-name">Netherlands</span><div class="gr-track"><div class="gr-fill" style="width:4%"></div></div><span class="gr-pct">4%</span></div>
+        </div>
+      </div>
+
+      <!-- Content pillars -->
+      <div class="abox" style="display:flex;flex-direction:column">
+        <div class="abox-lbl">Content Pillars</div>
+        <div class="pillar-rows">
+          <div class="pillar"><div class="pillar-bar" style="background:var(--gold)"></div><span class="pillar-nm">Lifestyle &amp; Vlogging</span></div>
+          <div class="pillar"><div class="pillar-bar" style="background:var(--gold)"></div><span class="pillar-nm">Fashion &amp; Styling</span></div>
+          <div class="pillar"><div class="pillar-bar" style="background:var(--teal)"></div><span class="pillar-nm">Tech &amp; Gadgets</span></div>
+          <div class="pillar"><div class="pillar-bar" style="background:var(--teal)"></div><span class="pillar-nm">Travel &amp; Events</span></div>
+          <div class="pillar" style="border-bottom:none"><div class="pillar-bar" style="background:var(--ink3)"></div><span class="pillar-nm">Day in the Life</span></div>
+        </div>
+        <div class="pillar-stat" style="margin-top:auto">
+          <div class="pillar-stat-n">13M+</div>
+          <div class="pillar-stat-l">Organic Series Views</div>
+        </div>
+        <div class="pillar-stat" style="margin-top:2mm;background:var(--teal-d);border-color:rgba(26,139,123,.22)">
+          <div class="pillar-stat-n" style="color:var(--teal)">30+</div>
+          <div class="pillar-stat-l">Brand Collaborations</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CAMPAIGNS -->
+    <div class="sec">Campaign Highlights</div>
+    <div class="camps">
+      <div class="camp">
+        <div class="camp-brand">SumUp &middot; Paid Partnership</div>
+        <div class="camp-title">Tap-to-Pay Campaign</div>
+        <div class="camp-num">2.7M</div>
+        <div class="camp-sub">Total Views &middot; TikTok</div>
+        <span class="camp-pill">4.1% Engagement Rate</span>
+      </div>
+      <div class="camp feat">
+        <div class="camp-brand">Personal &middot; Organic Series</div>
+        <div class="camp-title">The Laptop Series</div>
+        <div class="camp-num">6.6M</div>
+        <div class="camp-sub">Combined Series Views</div>
+        <span class="camp-pill">14.2% Engagement Rate</span>
+      </div>
+      <div class="camp">
+        <div class="camp-brand">CiCi AI &middot; Paid Partnership</div>
+        <div class="camp-title">AI Tools Campaign</div>
+        <div class="camp-num">2.4M</div>
+        <div class="camp-sub">Total Views &middot; TikTok</div>
+        <span class="camp-pill">3.9% Engagement Rate</span>
+      </div>
+    </div>
+
+    <!-- BRANDS -->
+    <div class="sec">Selected Brand Partners</div>
+    <div class="brands-grid" style="margin-bottom:6mm">
+      <div class="bc f">Formula 1</div><div class="bc f">BBC</div><div class="bc f">ASUS</div>
+      <div class="bc f">Trip.com</div><div class="bc f">NOW TV</div><div class="bc f">VO5</div>
+      <div class="bc">SumUp</div><div class="bc">The Oodie</div><div class="bc">Dossier</div>
+      <div class="bc">AliExpress</div><div class="bc">Bambu Labs</div><div class="bc">AirBrush</div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="sec">Services</div>
+    <div class="svcs">
+      <div class="svc">
+        <div class="svc-nm">TikTok Post</div>
+        <div class="svc-desc">Scripted, filmed and edited. Natural product integration with authentic on-camera delivery.</div>
+        <div class="svc-cta">Rate on request</div>
+      </div>
+      <div class="svc">
+        <div class="svc-nm">UGC Content</div>
+        <div class="svc-desc">Raw or edited clips for brand channels, paid ads and whitelisting campaigns.</div>
+        <div class="svc-cta">Rate on request</div>
+      </div>
+      <div class="svc">
+        <div class="svc-nm">Brand Ambassador</div>
+        <div class="svc-desc">Ongoing multi-video partnership. Consistent brand presence across content series.</div>
+        <div class="svc-cta">Rate on request</div>
+      </div>
+      <div class="svc">
+        <div class="svc-nm">IG Post / Reel</div>
+        <div class="svc-desc">Instagram placements across feed posts, Reels and Stories formats.</div>
+        <div class="svc-cta">Rate on request</div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-bar">
+      <div class="c-items">
+        <div>
+          <div class="c-lbl">Email</div>
+          <div class="c-val">jameshagen2008@gmail.com</div>
+        </div>
+        <div>
+          <div class="c-lbl">TikTok</div>
+          <div class="c-val">@james_hagen</div>
+        </div>
+        <div>
+          <div class="c-lbl">Instagram</div>
+          <div class="c-val">@james_hagen08</div>
+        </div>
+        <div>
+          <div class="c-lbl">Live Stats</div>
+          <div class="c-val">beacons.ai/james_hagen</div>
+        </div>
+      </div>
+      <div class="c-cta">
+        <div class="c-cta-lbl">Available for collabs</div>
+        <div class="c-cta-val">jameshagen2008@gmail.com</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="foot">
+      <div class="foot-copy">&#169; 2025 James Hagen &middot; All statistics verified &middot; Updated June 2025</div>
+      <div class="foot-at">@james_hagen</div>
+    </div>
+
+  </div><!-- /body -->
+</div><!-- /page -->
+</body>
+</html>
