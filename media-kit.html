@@ -332,7 +332,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
         </div>
       </div>
       <div class="hb-stat">
-        <div class="hb-num">188.8K</div>
+        <div class="hb-num" id="mk-total">188.8K</div>
         <div class="hb-lbl">Combined Followers</div>
         <div class="hb-sub">TikTok + Instagram</div>
       </div>
@@ -345,12 +345,12 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
   <!-- STATS BAND -->
   <div class="stats-band">
     <div class="sb-stat">
-      <div class="sb-num"><span class="a">140.6K</span></div>
+      <div class="sb-num"><span class="a" id="mk-tt-followers">140.6K</span></div>
       <div class="sb-lbl">TikTok Followers</div>
       <div class="sb-sub">@james_hagen</div>
     </div>
     <div class="sb-stat">
-      <div class="sb-num"><span class="a">11.6%</span></div>
+      <div class="sb-num"><span class="a" id="mk-tt-eng">11.6%</span></div>
       <div class="sb-lbl">TikTok Engagement</div>
       <div class="sb-sub">Top 25% Creator</div>
     </div>
@@ -360,7 +360,7 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
       <div class="sb-sub">TikTok Average</div>
     </div>
     <div class="sb-stat">
-      <div class="sb-num"><span class="a">48.2K</span></div>
+      <div class="sb-num"><span class="a" id="mk-ig-followers">48.2K</span></div>
       <div class="sb-lbl">Instagram Followers</div>
       <div class="sb-sub">@james_hagen08</div>
     </div>
@@ -381,9 +381,9 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
           </div>
           <div><div class="plat-nm">TikTok</div><div class="plat-hn">@james_hagen</div></div>
         </div>
-        <div class="sr"><span class="sl">Followers</span><span class="sv g">140,600</span></div>
-        <div class="sr"><span class="sl">Engagement Rate</span><span class="sv g">11.6%</span></div>
-        <div class="sr"><span class="sl">Average Views</span><span class="sv">9,300</span></div>
+        <div class="sr"><span class="sl">Followers</span><span class="sv g" id="mk-tt-followers-full">140,600</span></div>
+        <div class="sr"><span class="sl">Engagement Rate</span><span class="sv g" id="mk-tt-eng-full">11.6%</span></div>
+        <div class="sr"><span class="sl">Average Views</span><span class="sv" id="mk-tt-views">9,300</span></div>
         <div class="sr"><span class="sl">Average Likes</span><span class="sv">1,600</span></div>
         <div class="sr"><span class="sl">Creator Rank</span><span class="sv t">Top 25%</span></div>
       </div>
@@ -396,8 +396,8 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
           <div><div class="plat-nm">Instagram</div><div class="plat-hn">@james_hagen08</div></div>
         </div>
         <div class="sr"><span class="sl">Followers</span><span class="sv g">48,200</span></div>
-        <div class="sr"><span class="sl">Engagement Rate</span><span class="sv g">8.1%</span></div>
-        <div class="sr"><span class="sl">Female Audience</span><span class="sv">68%</span></div>
+        <div class="sr"><span class="sl">Engagement Rate</span><span class="sv g" id="mk-ig-eng">8.1%</span></div>
+        <div class="sr"><span class="sl">Female Audience</span><span class="sv" id="mk-ig-female">68%</span></div>
         <div class="sr"><span class="sl">Primary Age</span><span class="sv">18&#8211;34</span></div>
         <div class="sr"><span class="sl">Key Markets</span><span class="sv t">UK &middot; US &middot; DE</span></div>
       </div>
@@ -411,9 +411,9 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
       <!-- Gender + Age -->
       <div class="abox">
         <div class="abox-lbl">Gender Split</div>
-        <div class="g-bar"><div class="g-f" style="width:68%"></div><div class="g-m" style="width:32%"></div></div>
+        <div class="g-bar"><div class="g-f" id="mk-gbar-f" style="width:68%"></div><div class="g-m" id="mk-gbar-m" style="width:32%"></div></div>
         <div class="g-labels" style="margin-bottom:3.5mm">
-          <div class="g-lbl f">68%<small>Female</small></div>
+          <div class="g-lbl f"><span id="mk-female-pct">68%</span><small>Female</small></div>
           <div class="g-lbl" style="text-align:right">32%<small>Male</small></div>
         </div>
         <div class="abox-lbl">Age Distribution</div>
@@ -430,11 +430,11 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
       <div class="abox">
         <div class="abox-lbl">Top Countries</div>
         <div class="geo-rows">
-          <div class="gr"><span class="gr-flag">&#127468;&#127463;</span><span class="gr-name">United Kingdom</span><div class="gr-track"><div class="gr-fill" style="width:62%"></div></div><span class="gr-pct">62%</span></div>
-          <div class="gr"><span class="gr-flag">&#127482;&#127480;</span><span class="gr-name">United States</span><div class="gr-track"><div class="gr-fill" style="width:18%"></div></div><span class="gr-pct">18%</span></div>
-          <div class="gr"><span class="gr-flag">&#127465;&#127466;</span><span class="gr-name">Germany</span><div class="gr-track"><div class="gr-fill" style="width:8%"></div></div><span class="gr-pct">8%</span></div>
-          <div class="gr"><span class="gr-flag">&#127464;&#127462;</span><span class="gr-name">Canada</span><div class="gr-track"><div class="gr-fill" style="width:6%"></div></div><span class="gr-pct">6%</span></div>
-          <div class="gr"><span class="gr-flag">&#127475;&#127473;</span><span class="gr-name">Netherlands</span><div class="gr-track"><div class="gr-fill" style="width:4%"></div></div><span class="gr-pct">4%</span></div>
+          <div class="gr"><span class="gr-flag" id="mk-geo0-flag">&#127468;&#127463;</span><span class="gr-name" id="mk-geo0-name">United Kingdom</span><div class="gr-track"><div class="gr-fill" id="mk-geo0-bar" style="width:62%"></div></div><span class="gr-pct" id="mk-geo0-pct">62%</span></div>
+          <div class="gr"><span class="gr-flag" id="mk-geo1-flag">&#127482;&#127480;</span><span class="gr-name" id="mk-geo1-name">United States</span><div class="gr-track"><div class="gr-fill" id="mk-geo1-bar" style="width:18%"></div></div><span class="gr-pct" id="mk-geo1-pct">18%</span></div>
+          <div class="gr"><span class="gr-flag" id="mk-geo2-flag">&#127465;&#127466;</span><span class="gr-name" id="mk-geo2-name">Germany</span><div class="gr-track"><div class="gr-fill" id="mk-geo2-bar" style="width:8%"></div></div><span class="gr-pct" id="mk-geo2-pct">8%</span></div>
+          <div class="gr"><span class="gr-flag" id="mk-geo3-flag">&#127464;&#127462;</span><span class="gr-name" id="mk-geo3-name">Canada</span><div class="gr-track"><div class="gr-fill" id="mk-geo3-bar" style="width:6%"></div></div><span class="gr-pct" id="mk-geo3-pct">6%</span></div>
+          <div class="gr"><span class="gr-flag" id="mk-geo4-flag">&#127475;&#127473;</span><span class="gr-name" id="mk-geo4-name">Netherlands</span><div class="gr-track"><div class="gr-fill" id="mk-geo4-bar" style="width:4%"></div></div><span class="gr-pct" id="mk-geo4-pct">4%</span></div>
         </div>
       </div>
 
@@ -554,5 +554,56 @@ body{font-family:'Outfit',sans-serif;color:var(--ink);background:var(--bg3);line
 
   </div><!-- /body -->
 </div><!-- /page -->
+
+<script>
+function fmt(n){
+  if(n>=1000000) return (n/1000000).toFixed(1).replace(/\.0$/,'')+'M';
+  if(n>=1000)    return (n/1000).toFixed(1).replace(/\.0$/,'')+'K';
+  return n.toLocaleString();
+}
+function set(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
+function setW(id,pct){const el=document.getElementById(id);if(el)el.style.width=pct+'%';}
+
+async function loadStats(){
+  try{
+    const s=await(await fetch('stats.json?v='+Date.now())).json();
+    const tt=s.tiktok, ig=s.instagram, ov=s.overview, aud=s.audience;
+
+    /* Header combined total */
+    const total = tt.followers + ig.followers;
+    set('mk-total', fmt(total));
+
+    /* Stats band */
+    set('mk-tt-followers', fmt(tt.followers));
+    set('mk-tt-eng',       tt.engagementRate+'%');
+    set('mk-ig-followers', fmt(ig.followers));
+
+    /* TikTok platform card */
+    set('mk-tt-followers-full', tt.followers.toLocaleString());
+    set('mk-tt-eng-full',       tt.engagementRate+'%');
+    set('mk-tt-views',          tt.avgViewsPerVideo.toLocaleString());
+
+    /* Instagram platform card */
+    set('mk-ig-eng',    ig.engagementRate+'%');
+    set('mk-ig-female', aud.genderFemale+'%');
+
+    /* Gender bar */
+    setW('mk-gbar-f', aud.genderFemale);
+    setW('mk-gbar-m', aud.genderMale);
+    set('mk-female-pct', aud.genderFemale+'%');
+
+    /* Geography */
+    (aud.topCountries||[]).forEach((c,i)=>{
+      if(i>4) return;
+      set('mk-geo'+i+'-flag', c.flag||'');
+      set('mk-geo'+i+'-name', c.name);
+      set('mk-geo'+i+'-pct',  c.percent+'%');
+      setW('mk-geo'+i+'-bar', c.percent);
+    });
+
+  }catch(e){console.warn('stats.json load failed:',e);}
+}
+loadStats();
+</script>
 </body>
 </html>
