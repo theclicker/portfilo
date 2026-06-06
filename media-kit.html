@@ -210,6 +210,7 @@ body{
 .foot-brand span{color:var(--gold);font-style:italic}
 
 /* ── Print styles ── */
+
 @media print{
   html,body{width:210mm;margin:0;padding:0;background:var(--bg)!important}
   .print-btn{display:none!important}
@@ -234,7 +235,7 @@ body{
     </div>
     <div class="header-right">
       <div class="combined-stat">
-        <div class="cs-val">188.8K</div>
+        <div class="cs-val" id="mk-total">188.8K</div>
         <div class="cs-lbl">Combined Followers</div>
         <div class="cs-sub">TikTok + Instagram</div>
       </div>
@@ -252,10 +253,10 @@ body{
         <div><div class="plat-name">TikTok</div><div class="plat-handle">@james_hagen</div></div>
       </div>
       <div class="stat-rows">
-        <div class="stat-row"><span class="stat-lbl">Followers</span><span class="stat-val gold">140,600</span></div>
-        <div class="stat-row"><span class="stat-lbl">Engagement Rate</span><span class="stat-val gold">11.6%</span></div>
-        <div class="stat-row"><span class="stat-lbl">Avg Views / Video</span><span class="stat-val">9,300</span></div>
-        <div class="stat-row"><span class="stat-lbl">Creator Rank</span><span class="stat-val">Top 25%</span></div>
+        <div class="stat-row"><span class="stat-lbl">Followers</span><span class="stat-val gold" id="mk-tt-followers">140,600</span></div>
+        <div class="stat-row"><span class="stat-lbl">Engagement Rate</span><span class="stat-val gold" id="mk-tt-eng">11.6%</span></div>
+        <div class="stat-row"><span class="stat-lbl">Avg Views / Video</span><span class="stat-val" id="mk-tt-views">9,300</span></div>
+        <div class="stat-row"><span class="stat-lbl">Creator Rank</span><span class="stat-val" id="mk-tt-rank">Top 25%</span></div>
       </div>
     </div>
     <div class="platform">
@@ -266,9 +267,9 @@ body{
         <div><div class="plat-name">Instagram</div><div class="plat-handle">@james_hagen08</div></div>
       </div>
       <div class="stat-rows">
-        <div class="stat-row"><span class="stat-lbl">Followers</span><span class="stat-val gold">48,200</span></div>
-        <div class="stat-row"><span class="stat-lbl">Engagement Rate</span><span class="stat-val gold">8.1%</span></div>
-        <div class="stat-row"><span class="stat-lbl">Female Audience</span><span class="stat-val">68%</span></div>
+        <div class="stat-row"><span class="stat-lbl">Followers</span><span class="stat-val gold" id="mk-ig-followers">48,200</span></div>
+        <div class="stat-row"><span class="stat-lbl">Engagement Rate</span><span class="stat-val gold" id="mk-ig-eng">8.1%</span></div>
+        <div class="stat-row"><span class="stat-lbl">Female Audience</span><span class="stat-val" id="mk-ig-female">68%</span></div>
         <div class="stat-row"><span class="stat-lbl">Primary Age Group</span><span class="stat-val">18 – 34</span></div>
       </div>
     </div>
@@ -280,11 +281,11 @@ body{
       <div class="sec-label">Audience Geography</div>
       <div class="audience-box">
         <div class="geo-rows">
-          <div class="geo-row"><span class="geo-name">United Kingdom</span><div class="geo-track"><div class="geo-fill" style="width:62%"></div></div><span class="geo-pct">62%</span></div>
-          <div class="geo-row"><span class="geo-name">United States</span><div class="geo-track"><div class="geo-fill" style="width:18%"></div></div><span class="geo-pct">18%</span></div>
-          <div class="geo-row"><span class="geo-name">Germany</span><div class="geo-track"><div class="geo-fill" style="width:8%"></div></div><span class="geo-pct">8%</span></div>
-          <div class="geo-row"><span class="geo-name">Canada</span><div class="geo-track"><div class="geo-fill" style="width:6%"></div></div><span class="geo-pct">6%</span></div>
-          <div class="geo-row"><span class="geo-name">Netherlands</span><div class="geo-track"><div class="geo-fill" style="width:4%"></div></div><span class="geo-pct">4%</span></div>
+          <div class="geo-row"><span class="geo-name" id="mk-geo0-name">United Kingdom</span><div class="geo-track"><div class="geo-fill" id="mk-geo0-bar" style="width:62%"></div></div><span class="geo-pct" id="mk-geo0-pct">62%</span></div>
+          <div class="geo-row"><span class="geo-name" id="mk-geo1-name">United States</span><div class="geo-track"><div class="geo-fill" id="mk-geo1-bar" style="width:18%"></div></div><span class="geo-pct" id="mk-geo1-pct">18%</span></div>
+          <div class="geo-row"><span class="geo-name" id="mk-geo2-name">Germany</span><div class="geo-track"><div class="geo-fill" id="mk-geo2-bar" style="width:8%"></div></div><span class="geo-pct" id="mk-geo2-pct">8%</span></div>
+          <div class="geo-row"><span class="geo-name" id="mk-geo3-name">Canada</span><div class="geo-track"><div class="geo-fill" id="mk-geo3-bar" style="width:6%"></div></div><span class="geo-pct" id="mk-geo3-pct">6%</span></div>
+          <div class="geo-row"><span class="geo-name" id="mk-geo4-name">Netherlands</span><div class="geo-track"><div class="geo-fill" id="mk-geo4-bar" style="width:4%"></div></div><span class="geo-pct" id="mk-geo4-pct">4%</span></div>
         </div>
       </div>
     </div>
@@ -396,5 +397,45 @@ body{
   </div>
 
 </div>
+<script>
+function fmt(n){
+  if(n>=1000000) return (n/1000000).toFixed(1).replace(/\.0$/,'')+'M';
+  if(n>=1000)    return (n/1000).toFixed(1).replace(/\.0$/,'')+'K';
+  return n.toLocaleString();
+}
+function set(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
+
+async function loadStats(){
+  try{
+    const s=await(await fetch('stats.json?v='+Date.now())).json();
+    const tt=s.tiktok, ig=s.instagram, ov=s.overview, aud=s.audience;
+
+    /* Header combined */
+    const total=(tt.followers+ig.followers);
+    set('mk-total', fmt(total));
+
+    /* TikTok card */
+    set('mk-tt-followers', tt.followers.toLocaleString());
+    set('mk-tt-eng',       tt.engagementRate+'%');
+    set('mk-tt-views',     tt.avgViewsPerVideo.toLocaleString());
+    set('mk-tt-rank',      tt.creatorRank);
+
+    /* Instagram card */
+    set('mk-ig-followers', ig.followers.toLocaleString());
+    set('mk-ig-eng',       ig.engagementRate+'%');
+    set('mk-ig-female',    aud.genderFemale+'%');
+
+    /* Geography bars */
+    (aud.topCountries||[]).forEach((c,i)=>{
+      set('mk-geo'+i+'-name', c.name);
+      set('mk-geo'+i+'-pct',  c.percent+'%');
+      const bar=document.getElementById('mk-geo'+i+'-bar');
+      if(bar) bar.style.width=c.percent+'%';
+    });
+
+  }catch(e){console.warn('stats.json not loaded:',e);}
+}
+loadStats();
+</script>
 </body>
 </html>
