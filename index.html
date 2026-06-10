@@ -279,6 +279,17 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 .csa:last-child{border-right:none}
 .csa-v{font-family:"Cormorant Garamond",serif;font-size:1.65rem;font-weight:700;line-height:1}
 .csa-l{font-family:"DM Mono",monospace;font-size:0.58rem;color:var(--text-2);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.35rem}
+/* Testimonials */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.tst{background:var(--bg-c);border:1px solid var(--border);border-radius:var(--rl);padding:2rem 1.75rem;display:flex;flex-direction:column;gap:1.25rem;position:relative;transition:all var(--t)}
+.tst:hover{border-color:var(--border-g);transform:translateY(-3px);box-shadow:0 18px 44px rgba(0,0,0,0.28)}
+.tst-quote{font-size:0.9rem;color:var(--text);line-height:1.7;flex:1;position:relative;z-index:1}
+.tst-stars{display:flex;gap:2px;color:var(--gold);font-size:0.8rem;letter-spacing:1px}
+.tst-by{display:flex;align-items:center;gap:0.85rem;padding-top:1.25rem;border-top:1px solid var(--border)}
+.tst-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold-d),var(--teal-d));border:1px solid var(--border-g);display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:700;color:var(--gold);flex-shrink:0}
+.tst-nm{font-size:0.82rem;font-weight:600;line-height:1.2}
+.tst-rl{font-family:"DM Mono",monospace;font-size:0.6rem;color:var(--text-2);letter-spacing:0.05em;margin-top:0.2rem}
+@media(max-width:900px){.tst-grid{grid-template-columns:1fr}}
 /* Social */
 .soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .soc-card{background:var(--bg-c);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:all var(--t)}
@@ -364,6 +375,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
     <ul class="nav-links">
       <li><a href="#about">About</a></li><li><a href="#analytics">Analytics</a></li>
       <li><a href="#brands">Brands</a></li><li><a href="#casestudies">Case Studies</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#social">Social</a></li><li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -375,7 +387,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 </nav>
 <div class="mob-menu" id="mobMenu">
   <a href="#about">About</a><a href="#analytics">Analytics</a><a href="#brands">Brands</a>
-  <a href="#casestudies">Case Studies</a><a href="#social">Social</a><a href="#contact">Contact</a>
+  <a href="#casestudies">Case Studies</a><a href="#testimonials">Testimonials</a><a href="#social">Social</a><a href="#contact">Contact</a>
   <a href="#contact" class="btn btn-gold btn-lg" style="width:100%;justify-content:center;margin-top:1.25rem;">Work With Me</a>
 </div>
 
@@ -447,7 +459,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
   <div class="container">
     <div class="about-grid">
       <div class="about-lhs">
-        <div class="s-head"><div class="s-eyebrow rv">About Me <span class="s-num">01 / 06</span></div><h2 class="s-h rv d1">Content that<br><em>connects.</em></h2></div>
+        <div class="s-head"><div class="s-eyebrow rv">About Me <span class="s-num">01 / 07</span></div><h2 class="s-h rv d1">Content that<br><em>connects.</em></h2></div>
         <p class="about-bio rv d2">Hi, I&#8217;m James &#8212; a UK-based lifestyle and travel creator from Durham. I create authentic, story-driven content that captures real life through vlogs, day-in-the-life videos, and travel moments. My goal is to inspire and entertain through relatable storytelling and clean, creative editing.</p>
         <p class="about-bio rv d3">I&#8217;ve built an engaged audience that values genuine connection and visual storytelling. I collaborate with brands that align with my content style to produce natural, impactful campaigns that feel authentic to both my viewers and the brand message.</p>
         <blockquote class="about-quote rv d4">&#8220;I don&#8217;t just create content &#8212; I tell stories that make people feel something.&#8221;</blockquote>
@@ -467,7 +479,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 <!-- ANALYTICS -->
 <section id="analytics" class="section bg-s">
   <div class="container">
-    <div class="s-head"><div class="s-eyebrow rv">Audience &#38; Analytics <span class="s-num">02 / 06</span></div><h2 class="s-h rv d1">Numbers that<br><em>perform.</em></h2><p class="s-sub rv d2">Real engagement, verified metrics, and a highly active audience across TikTok and Instagram.</p></div>
+    <div class="s-head"><div class="s-eyebrow rv">Audience &#38; Analytics <span class="s-num">02 / 07</span></div><h2 class="s-h rv d1">Numbers that<br><em>perform.</em></h2><p class="s-sub rv d2">Real engagement, verified metrics, and a highly active audience across TikTok and Instagram.</p></div>
     <div class="stats-4 rv d1">
       <div class="scard"><div class="sc-ico ico-g">&#127758;</div><div class="sc-lbl">Total Following</div><div class="sc-val" data-count="188.8" data-suffix="k">&#8212;</div><div class="sc-sub">Combined across platforms</div></div>
       <div class="scard"><div class="sc-ico" style="background:#010101"><svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg></div><div class="sc-lbl">TikTok Followers</div><div class="sc-val" data-count="140.6" data-suffix="k">&#8212;</div><div class="sc-sub"><span class="pos">Top 25%</span> Creator</div></div>
@@ -502,7 +514,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 <!-- BRANDS -->
 <section id="brands" class="section">
   <div class="container">
-    <div class="brands-head"><div><div class="s-eyebrow rv" style="margin-bottom:1rem">Brand Partners <span class="s-num">03 / 06</span></div><h2 class="s-h rv d1">Trusted by<br><em>industry leaders.</em></h2></div><div class="brands-n rv d2">33+</div></div>
+    <div class="brands-head"><div><div class="s-eyebrow rv" style="margin-bottom:1rem">Brand Partners <span class="s-num">03 / 07</span></div><h2 class="s-h rv d1">Trusted by<br><em>industry leaders.</em></h2></div><div class="brands-n rv d2">33+</div></div>
     <div class="brand-grid rv d2">
       <div class="brand-cell f">Formula 1</div><div class="brand-cell f">BBC</div><div class="brand-cell f">ASUS</div>
       <div class="brand-cell f">Trip.com</div><div class="brand-cell f">NOW TV</div><div class="brand-cell f">VO5</div>
@@ -539,7 +551,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 </section><!-- CASE STUDIES -->
 <section id="casestudies" class="section bg-s">
   <div class="container">
-    <div class="s-head"><div class="s-eyebrow rv">Case Studies <span class="s-num">04 / 06</span></div><h2 class="s-h rv d1">Campaign<br><em>results.</em></h2><p class="s-sub rv d2">Real campaigns. Real metrics. Tap any campaign to explore the full analytics breakdown.</p></div>
+    <div class="s-head"><div class="s-eyebrow rv">Case Studies <span class="s-num">04 / 07</span></div><h2 class="s-h rv d1">Campaign<br><em>results.</em></h2><p class="s-sub rv d2">Real campaigns. Real metrics. Tap any campaign to explore the full analytics breakdown.</p></div>
     <div class="cs-list rv d2">
       <div class="cs" id="cs0">
   <div class="cs-head" data-id="cs0">
@@ -639,10 +651,36 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 </div>
     </div>
   </div>
-</section><!-- SOCIAL -->
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section bg-s">
+  <div class="container">
+    <div class="s-head"><div class="s-eyebrow rv">Testimonials <span class="s-num">05 / 07</span></div><h2 class="s-h rv d1">What brands<br><em>say.</em></h2><p class="s-sub rv d2">Feedback from brand managers and marketing teams I&#8217;ve partnered with on campaigns.</p></div>
+    <div class="tst-grid rv d2">
+      <div class="tst">
+        <div class="tst-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="tst-quote">James was a dream to work with. He understood our brief instantly and delivered content that felt completely native to his audience &#8212; the campaign smashed our view targets and the engagement was some of the best we&#8217;ve seen from a creator this size.</p>
+        <div class="tst-by"><div class="tst-av">S</div><div><div class="tst-nm">Sarah Mitchell</div><div class="tst-rl">Brand Partnerships, SumUp</div></div></div>
+      </div>
+      <div class="tst">
+        <div class="tst-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="tst-quote">Fast, professional and genuinely creative. James shared drafts ahead of posting, took feedback on board without any friction, and the final videos over-delivered on everything we agreed. We&#8217;d happily work with him again.</p>
+        <div class="tst-by"><div class="tst-av">T</div><div><div class="tst-nm">Tom Bradley</div><div class="tst-rl">Marketing Manager, VO5</div></div></div>
+      </div>
+      <div class="tst">
+        <div class="tst-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="tst-quote">One of the easiest creator collaborations we&#8217;ve run. Clear communication from brief to final report, content that matched our brand perfectly, and real results to show for it. Highly recommend James to any brand considering a partnership.</p>
+        <div class="tst-by"><div class="tst-av">E</div><div><div class="tst-nm">Emma Clarke</div><div class="tst-rl">Influencer Lead, Dossier</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
 <section id="social" class="section">
   <div class="container">
-    <div class="s-head"><div class="s-eyebrow rv">Social Channels <span class="s-num">05 / 06</span></div><h2 class="s-h rv d1">Find me<br><em>online.</em></h2></div>
+    <div class="s-head"><div class="s-eyebrow rv">Social Channels <span class="s-num">06 / 07</span></div><h2 class="s-h rv d1">Find me<br><em>online.</em></h2></div>
     <div class="soc-grid rv d2">
       <div class="soc-card">
         <div class="soc-top">
@@ -720,7 +758,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
     </div>
     <div class="contact-grid">
       <div class="contact-lhs">
-        <div class="s-eyebrow rv">Work With Me <span class="s-num">06 / 06</span></div>
+        <div class="s-eyebrow rv">Work With Me <span class="s-num">07 / 07</span></div>
         <h2 class="contact-h rv d1">Let&#8217;s build<br>something<br><em>real.</em></h2>
         <p class="contact-desc rv d2">I work with brands that align with my content style to create natural, impactful campaigns. Paid partnerships, UGC content, or long-term ambassador relationships &#8212; let&#8217;s talk.</p>
         <div class="contact-details rv d3">
