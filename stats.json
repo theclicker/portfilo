@@ -1,15 +1,16 @@
 {
   "_instructions": "Update this file every week with your latest stats. Save it, then refresh the site.",
-  "lastUpdated": "2026-06-03",
+  "lastUpdated": "2026-08-13",
 
   "overview": {
-    "totalFollowers": 188800,
-    "brandCollabs": 33,
+    "totalFollowers": 199600,
+    "brandCollabs": 38,
     "organicSeriesViews": "4M+"
   },
 
   "tiktok": {
-    "followers": 140600,
+    "followers": 149200,
+    "totalLikes": "6.2M",
     "engagementRate": 11.6,
     "avgViewsPerVideo": 9300,
     "avgLikesPerVideo": 1600,
@@ -18,8 +19,12 @@
   },
 
   "instagram": {
-    "followers": 48200,
-    "engagementRate": 8.1
+    "followers": 50400,
+    "engagementRate": 8.1,
+    "views30d": 418914,
+    "viewers30d": 224373,
+    "interactions30d": 24038,
+    "accountsEngaged30d": 18052
   },
 
   "audience": {
@@ -41,13 +46,26 @@
     ]
   },
 
+  "recentCampaigns": [
+    { "brand": "Dola",        "deliverables": 3, "views": 1724000, "note": "Top video 1.5M views (19 Jun)" },
+    { "brand": "Desktronic",  "deliverables": 3, "views": 2711000, "note": "Office build series, Jun 2026" },
+    { "brand": "Trip.com",    "deliverables": 1, "views": 551000,  "note": "UK rail summer campaign, 29 Jun" },
+    { "brand": "FlexiSpot",   "deliverables": 2, "views": 72000,   "note": "E7 Pro + CylineX" },
+    { "brand": "Secretlab",   "deliverables": 1, "views": 5886,    "note": "MAGNUS Pro XL" },
+    { "brand": "Virtura",     "deliverables": 1, "views": 3285,    "note": "Mousepad, code JAMES" },
+    { "brand": "FIFINE",      "deliverables": 1, "views": 3326,    "note": "Tank6 / Ampli1" },
+    { "brand": "AVCOM",       "deliverables": 1, "views": 3232,    "note": "via Gear4music" },
+    { "brand": "AJazz",       "deliverables": 1, "views": 1441,    "note": "Keyboard / mouse" },
+    { "brand": "Divoom",      "deliverables": 1, "views": 1751,    "note": "Pixoo 64" }
+  ],
+
   "ticker": {
-    "combinedFollowers": "188.8K",
+    "combinedFollowers": "199.6K",
     "tiktokEngagement": "11.6%",
     "avgViewsPerVideo": "9.3K",
     "creatorRank": "Top 25%",
     "femaleAudience": "68%",
-    "brandCollabs": "33+",
+    "brandCollabs": "38+",
     "organicSeriesViews": "4M+",
     "featuredBrands": "BBC · Formula 1 · ASUS · Trip.com"
   }
