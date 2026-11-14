@@ -788,7 +788,7 @@ async function loadStats(){
   cases.concat(series).forEach(c=>{D['cs:'+c.id]=totalDisplay(c);D['videos:'+c.id]=String((c.videos||[]).length);});
   document.querySelectorAll('[data-stat]').forEach(el=>{const v=D[el.dataset.stat];if(v!=null&&v!=='')el.textContent=v;});
   /* Let the browser paint the headline numbers before building the heavier sections */
-  await new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));
+  await new Promise(r=>setTimeout(r,0));
 
   /* Ticker (two copies so the loop is seamless) */
   const tItems=[[D.monthlyViews,'Views every month'],[D.combinedFollowers,'Combined followers'],[D.tiktokER,'TikTok engagement rate'],[D.tiktokRank,'TikTok creator'],[D.topVideo,'Views on one sponsored video'],[D.tiktokViews28d,'TikTok views, last 28 days'],[D.female,'Female audience'],[D.brands,'Brand collaborations']].filter(x=>x[0]);
