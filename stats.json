@@ -1,41 +1,87 @@
 {
-  "_instructions": "Update this file every week with your latest stats. Save it, then refresh the site.",
-  "lastUpdated": "2026-08-13",
+  "_instructions": [
+    "This file is the single source of truth for every number, brand, campaign, testimonial and package on index.html and media-kit.html. Both pages read it when they load, so you never need to edit the HTML to update a figure.",
+    "How to update: open this file, change the value, save it, then push to GitHub. Numbers are plain integers (write 146200, not 146.2K); the pages format them for display.",
+    "meta.lastUpdated is shown on both pages as 'Updated November 2026' and should be changed whenever you refresh the figures.",
+    "Any value set to \"TODO_JAMES\" is hidden on the pages until you replace it with the real value. Search this file for TODO_JAMES to see what is still missing.",
+    "Case studies: 'featured': true puts a campaign in the case-study list; 'order' sets its position. Set featured to false to keep a campaign in the file without showing it. 'showEngagementRate' controls whether the engagement figure appears on that card.",
+    "Videos: 'url' is the public TikTok (or YouTube) link. When it is TODO_JAMES the card shows the caption and views but cannot be played.",
+    "Brands: 'featured' highlights a name on the brand wall, 'repeatClient' adds it to the 'Brands that came back' line, 'logo' is an optional image path (for example 'logos/sumup.svg'); the name is shown as text when logo is empty.",
+    "Testimonials: keep quotes word for word. 'logo' and 'sourceUrl' are optional and hidden while TODO_JAMES.",
+    "Packages: every package shows 'Rate on request'. There are no prices anywhere in this file on purpose."
+  ],
+
+  "meta": {
+    "lastUpdated": "2026-11-14",
+    "name": "James Hagen",
+    "location": "Durham, United Kingdom",
+    "email": "jameshagen2008@gmail.com",
+    "sourceNote": "Figures checked against TikTok Studio, Instagram Insights and YouTube Studio on 14 November 2026."
+  },
 
   "overview": {
-    "totalFollowers": 199600,
+    "combinedFollowers": 196462,
+    "combinedFollowersNote": "TikTok + Instagram",
+    "monthlyViews": 2051983,
+    "monthlyViewsDisplay": "2M+",
+    "monthlyViewsNote": "TikTok (last 28 days) + Instagram and Facebook (last 30 days)",
     "brandCollabs": 38,
-    "organicSeriesViews": "4M+"
+    "brandCollabsDisplay": "38+",
+    "engagementNote": "The engagement rate shown is my account-wide TikTok rate (11.6%), not a per-campaign figure."
   },
 
-  "tiktok": {
-    "followers": 149200,
-    "totalLikes": "6.2M",
-    "engagementRate": 11.6,
-    "avgViewsPerVideo": 9300,
-    "avgLikesPerVideo": 1600,
-    "avgCommentsPerVideo": 154,
-    "creatorRank": "Top 25%"
-  },
-
-  "instagram": {
-    "followers": 50400,
-    "engagementRate": 8.1,
-    "views30d": 418914,
-    "viewers30d": 224373,
-    "interactions30d": 24038,
-    "accountsEngaged30d": 18052
+  "platforms": {
+    "tiktok": {
+      "handle": "@james_hagen",
+      "url": "https://www.tiktok.com/@james_hagen",
+      "followers": 146200,
+      "totalLikes": 6400000,
+      "totalPosts": 951,
+      "engagementRate": 11.6,
+      "creatorRank": "Top 25%",
+      "views28d": 742300
+    },
+    "instagram": {
+      "handle": "@james_hagen08",
+      "url": "https://www.instagram.com/james_hagen08",
+      "followers": 50262,
+      "views30d": 1309683,
+      "views30dNote": "Includes Reels cross-posted to Facebook",
+      "viewsOnInstagram30d": 504040,
+      "viewsOnFacebook30d": 805643
+    },
+    "facebook": {
+      "handle": "James Hagen",
+      "url": "TODO_JAMES",
+      "followers": 2100,
+      "views30d": 805643,
+      "views30dNote": "Reels cross-posted from Instagram"
+    },
+    "youtube": {
+      "handle": "@James_Hagen",
+      "url": "https://www.youtube.com/@James_Hagen",
+      "subscribers": 1748,
+      "featuredVideo": {
+        "title": "i bought my first car... (manual)",
+        "url": "https://www.youtube.com/watch?v=-9zQZ9_yWxc",
+        "views": 177000,
+        "length": "7:16",
+        "posted": "2026-09",
+        "note": "My first long-form video and part of the car-buying series."
+      }
+    }
   },
 
   "audience": {
-    "genderFemale": 68,
-    "genderMale": 32,
+    "source": "TikTok followers",
+    "genderFemale": 67,
+    "genderMale": 33,
     "ageBreakdown": {
-      "13-17": 8,
-      "18-24": 45,
-      "25-34": 32,
+      "18-24": 50,
+      "25-34": 30,
       "35-44": 10,
-      "45+": 5
+      "45-54": 8,
+      "55+": 2
     },
     "topCountries": [
       { "flag": "🇬🇧", "name": "United Kingdom", "percent": 62 },
@@ -46,27 +92,375 @@
     ]
   },
 
-  "recentCampaigns": [
-    { "brand": "Dola",        "deliverables": 3, "views": 1724000, "note": "Top video 1.5M views (19 Jun)" },
-    { "brand": "Desktronic",  "deliverables": 3, "views": 2711000, "note": "Office build series, Jun 2026" },
-    { "brand": "Trip.com",    "deliverables": 1, "views": 551000,  "note": "UK rail summer campaign, 29 Jun" },
-    { "brand": "FlexiSpot",   "deliverables": 2, "views": 72000,   "note": "E7 Pro + CylineX" },
-    { "brand": "Secretlab",   "deliverables": 1, "views": 5886,    "note": "MAGNUS Pro XL" },
-    { "brand": "Virtura",     "deliverables": 1, "views": 3285,    "note": "Mousepad, code JAMES" },
-    { "brand": "FIFINE",      "deliverables": 1, "views": 3326,    "note": "Tank6 / Ampli1" },
-    { "brand": "AVCOM",       "deliverables": 1, "views": 3232,    "note": "via Gear4music" },
-    { "brand": "AJazz",       "deliverables": 1, "views": 1441,    "note": "Keyboard / mouse" },
-    { "brand": "Divoom",      "deliverables": 1, "views": 1751,    "note": "Pixoo 64" }
+  "caseStudies": [
+    {
+      "id": "airbrush",
+      "order": 1,
+      "featured": true,
+      "brand": "AirBrush",
+      "title": "AirBrush hairstyle try-on",
+      "type": "Sponsored TikTok",
+      "category": "Beauty & apps",
+      "platform": "TikTok",
+      "date": "Nov 2025",
+      "repeatClient": false,
+      "totalViews": 8500000,
+      "highlightMetric": { "label": "Likes", "value": 11000 },
+      "showEngagementRate": false,
+      "summary": "One sponsored TikTok trying out hairstyles in the AirBrush app before committing to a cut. My biggest sponsored result to date.",
+      "videos": [
+        { "caption": "Trying out hairstyles before I actually commit...", "posted": "2025-11-25", "views": 8500000, "likes": 11000, "comments": 301, "url": "TODO_JAMES" }
+      ]
+    },
+    {
+      "id": "dola",
+      "order": 3,
+      "featured": true,
+      "brand": "Dola",
+      "brandNote": "formerly CiCi AI",
+      "title": "Dola AI assistant, repeat partnership",
+      "type": "Paid partnership",
+      "category": "Technology & productivity",
+      "platform": "TikTok",
+      "date": "Oct 2025 to Aug 2026",
+      "repeatClient": true,
+      "totalViews": 5163000,
+      "highlightMetric": { "label": "Videos delivered", "value": 8, "suffix": " videos" },
+      "showEngagementRate": false,
+      "summary": "Eight paid videos for Dola, the ByteDance app that was called CiCi AI until November 2025. Desk organising, revision, planning and budgeting formats, each built around a real use case.",
+      "videos": [
+        { "caption": "Trying to get my desk organised once and for all", "posted": "2025-10-31", "views": 2100000, "likes": 4124, "comments": 133, "url": "https://www.tiktok.com/@james_hagen/video/7567307650824916227", "showcase": true },
+        { "caption": "Trying hairstyles before I make another terrible decision", "posted": "2026-06-19", "views": 1500000, "likes": 1843, "comments": 12, "url": "TODO_JAMES", "showcase": true },
+        { "caption": "Every group has that one person who skips the lecture...", "posted": "2026-03-09", "views": 500000, "likes": 768, "comments": 3, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "My notes were all over the place... this tool...", "posted": "2025-10-31", "views": 357000, "likes": 1112, "comments": 10, "url": "https://www.tiktok.com/@james_hagen/video/7567302350004587798", "showcase": false },
+        { "caption": "I let this tool plan my entire week...", "posted": "2026-07-08", "views": 224000, "likes": 519, "comments": 2, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "The hours I've wasted trying to make sense of...", "posted": "2025-09-24", "views": 172000, "likes": 2572, "comments": 17, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "Revised for two days straight and somehow...", "posted": "2026-06-23", "views": 160000, "likes": 424, "comments": 3, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "£15 and a train ticket: how far can you actually...", "posted": "2026-08-22", "views": 150000, "likes": 342, "comments": 8, "url": "TODO_JAMES", "showcase": false }
+      ]
+    },
+    {
+      "id": "sumup",
+      "order": 4,
+      "featured": true,
+      "brand": "SumUp",
+      "title": "SumUp Tap to Pay",
+      "type": "Sponsored TikTok",
+      "category": "Business & payments",
+      "platform": "TikTok",
+      "date": "Nov 2025",
+      "repeatClient": false,
+      "totalViews": 4000000,
+      "highlightMetric": { "label": "Likes", "value": 24000 },
+      "showEngagementRate": false,
+      "summary": "One sponsored TikTok showing SumUp's Tap to Pay for small businesses in a day-in-the-life format.",
+      "videos": [
+        { "caption": "Never miss a sale again with SumUp Tap to Pay", "posted": "2025-11-27", "views": 4000000, "likes": 24000, "comments": 80, "url": "https://www.tiktok.com/@james_hagen/video/7577368157141224726" }
+      ]
+    },
+    {
+      "id": "desktronic",
+      "order": 6,
+      "featured": true,
+      "brand": "Desktronic",
+      "title": "Office build series",
+      "type": "Paid series",
+      "category": "Office & workspace",
+      "platform": "TikTok",
+      "date": "Jun 2026",
+      "repeatClient": false,
+      "totalViews": 3223000,
+      "highlightMetric": { "label": "Videos delivered", "value": 3, "suffix": " videos" },
+      "showEngagementRate": false,
+      "summary": "Three-part paid series building my dream desk setup in the new office around Desktronic's standing desk and chair, with my discount code JAMES.",
+      "videos": [
+        { "caption": "Part 1 of building my dream desk setup in the new office", "posted": "2026-06-17", "views": 1500000, "likes": 760, "comments": 9, "url": "https://www.tiktok.com/@james_hagen/video/7652271102680452374" },
+        { "caption": "This is the big change I was talking about (standing desk)", "posted": "2026-06-23", "views": 1200000, "likes": 656, "comments": 6, "url": "https://www.tiktok.com/@james_hagen/video/7654469059806792982" },
+        { "caption": "Part 2 of building my dream desk setup. This chair...", "posted": "2026-06-18", "views": 523000, "likes": 419, "comments": 3, "url": "https://www.tiktok.com/@james_hagen/video/7652624364147346710" }
+      ]
+    },
+    {
+      "id": "tripcom",
+      "order": 7,
+      "featured": true,
+      "brand": "Trip.com",
+      "title": "Trip.com Easter Sale and UK rail",
+      "type": "Paid TikToks",
+      "category": "Travel",
+      "platform": "TikTok",
+      "date": "Mar and Jun 2026",
+      "repeatClient": false,
+      "totalViews": 1169000,
+      "highlightMetric": { "label": "Videos delivered", "value": 2, "suffix": " videos" },
+      "showEngagementRate": false,
+      "summary": "Two paid TikToks for Trip.com: an Easter day out for the Easter Sale, and UK rail travel.",
+      "videos": [
+        { "caption": "Me and Summer have been planning an Easter day out...", "posted": "2026-03-23", "views": 618000, "likes": 1022, "comments": 13, "url": "TODO_JAMES" },
+        { "caption": "UK train travel is about to get a whole lot more...", "posted": "2026-06-29", "views": 551000, "likes": 838, "comments": 6, "url": "TODO_JAMES" }
+      ]
+    },
+    {
+      "id": "nutribullet",
+      "order": 8,
+      "featured": true,
+      "brand": "Nutribullet",
+      "title": "Nutribullet milkshake",
+      "type": "Sponsored TikTok",
+      "category": "Home & kitchen",
+      "platform": "TikTok",
+      "date": "Oct 2025",
+      "repeatClient": false,
+      "totalViews": 406000,
+      "highlightMetric": { "label": "Likes", "value": 26000 },
+      "showEngagementRate": false,
+      "summary": "One sponsored TikTok making a milkshake for the sweet-treat crowd.",
+      "videos": [
+        { "caption": "For all my sweet treat lovers out there (milkshake)", "posted": "2025-10-06", "views": 406000, "likes": 26000, "comments": 107, "url": "TODO_JAMES" }
+      ]
+    },
+    {
+      "id": "vo5",
+      "order": 20,
+      "featured": false,
+      "brand": "VO5",
+      "title": "VO5 UGC campaign",
+      "type": "UGC campaign",
+      "category": "Beauty & hair",
+      "platform": "TikTok",
+      "date": "Jan 2026",
+      "repeatClient": false,
+      "totalViews": 4700,
+      "highlightMetric": { "label": "Likes", "value": 269 },
+      "showEngagementRate": false,
+      "summary": "UGC video for VO5 hair care.",
+      "videos": [
+        { "caption": "VO5 UGC campaign", "posted": "2026-01-17", "views": 4700, "likes": 269, "comments": 8, "url": "https://www.tiktok.com/@james_hagen/video/7596268440546053398" }
+      ]
+    },
+    {
+      "id": "dossier",
+      "order": 21,
+      "featured": false,
+      "brand": "Dossier",
+      "title": "Dossier perfumes",
+      "type": "Paid partnership",
+      "category": "Beauty & fragrance",
+      "platform": "TikTok",
+      "date": "Oct and Nov 2025",
+      "repeatClient": false,
+      "totalViews": 6500,
+      "highlightMetric": { "label": "Likes", "value": 377 },
+      "showEngagementRate": false,
+      "summary": "Two paid videos for Dossier's fragrance range.",
+      "videos": [
+        { "caption": "Dossier perfumes video 1", "posted": "2025-11-19", "views": 3600, "likes": 233, "comments": 3, "url": "https://www.tiktok.com/@james_hagen/video/7574510175374019862" },
+        { "caption": "Dossier perfumes video 2", "posted": "2025-10-06", "views": 2900, "likes": 144, "comments": 4, "url": "https://www.tiktok.com/@james_hagen/video/7558156081789226262" }
+      ]
+    },
+    {
+      "id": "safewrite",
+      "order": 22,
+      "featured": false,
+      "brand": "SafeWrite AI",
+      "title": "SafeWrite AI student services",
+      "type": "Paid TikTok",
+      "category": "Education",
+      "platform": "TikTok",
+      "date": "Nov 2025",
+      "repeatClient": false,
+      "totalViews": 93000,
+      "highlightMetric": { "label": "Likes", "value": 433 },
+      "showEngagementRate": false,
+      "summary": "One paid TikTok about AI detectors for students.",
+      "videos": [
+        { "caption": "These AI detectors are getting scary accurate", "posted": "2025-11-13", "views": 93000, "likes": 433, "comments": 16, "url": "https://www.tiktok.com/@james_hagen/video/7572244352454462742" }
+      ]
+    }
   ],
 
-  "ticker": {
-    "combinedFollowers": "199.6K",
-    "tiktokEngagement": "11.6%",
-    "avgViewsPerVideo": "9.3K",
-    "creatorRank": "Top 25%",
-    "femaleAudience": "68%",
-    "brandCollabs": "38+",
-    "organicSeriesViews": "4M+",
-    "featuredBrands": "BBC · Formula 1 · ASUS · Trip.com"
-  }
+  "organicSeries": [
+    {
+      "id": "laptop",
+      "order": 2,
+      "featured": true,
+      "name": "The Laptop Series",
+      "title": "The Laptop Series",
+      "type": "Organic series",
+      "category": "Entertainment",
+      "platform": "TikTok",
+      "date": "Sep to Oct 2025",
+      "totalViews": 7765000,
+      "episodes": 5,
+      "highlightMetric": { "label": "Likes", "value": 1863000 },
+      "showEngagementRate": true,
+      "summary": "Five organic episodes following a laptop upgrade from start to finish. The second episode alone passed 4M views with over a million likes. This is the kind of series brands can slot into.",
+      "videos": [
+        { "caption": "Laptop Series, episode 1", "posted": "2025-09-26", "views": 524000, "likes": 101000, "comments": 811, "url": "https://www.tiktok.com/@james_hagen/video/7554449216035228950" },
+        { "caption": "Laptop Series, episode 2", "posted": "2025-09-27", "views": 4200000, "likes": 1100000, "comments": 64000, "url": "https://www.tiktok.com/@james_hagen/video/7554849101750291734" },
+        { "caption": "Laptop Series, episode 3", "posted": "2025-09-28", "views": 432000, "likes": 108000, "comments": 3026, "url": "https://www.tiktok.com/@james_hagen/video/7555091399843106070" },
+        { "caption": "Laptop Series, episode 4", "posted": "2025-09-30", "views": 2400000, "likes": 528000, "comments": 28000, "url": "https://www.tiktok.com/@james_hagen/video/7555851487201529110" },
+        { "caption": "Laptop Series, episode 5", "posted": "2025-10-03", "views": 209000, "likes": 26000, "comments": 76, "url": "TODO_JAMES" }
+      ]
+    },
+    {
+      "id": "car",
+      "order": 5,
+      "featured": true,
+      "name": "The Car-Buying Series",
+      "title": "The Car-Buying Series",
+      "type": "Organic series",
+      "category": "Everyday life",
+      "platform": "TikTok + YouTube",
+      "date": "Jan to Sep 2026",
+      "totalViews": 3578000,
+      "totalViewsDisplay": "3.5M+",
+      "totalViewsNote": "3.4M across 7 TikTok episodes plus 177K on the YouTube long-form video",
+      "claimedTotal": "TODO_JAMES",
+      "episodes": 7,
+      "highlightMetric": { "label": "Likes", "value": 926000 },
+      "showEngagementRate": false,
+      "summary": "Seven TikTok episodes about buying my first car. The top episode hit 2.1M views. The series then carried over to YouTube as my first proper long-form video.",
+      "longForm": {
+        "platform": "YouTube",
+        "title": "i bought my first car... (manual)",
+        "url": "https://www.youtube.com/watch?v=-9zQZ9_yWxc",
+        "views": 177000,
+        "channelSubscribers": 1748,
+        "note": "177K views on a channel with 1.7K subscribers: the series works in long form too."
+      },
+      "videos": [
+        { "caption": "Car-Buying Series, episode 1", "posted": "2026-01-24", "views": 2100000, "likes": 604000, "comments": 49000, "url": "TODO_JAMES", "showcase": true },
+        { "caption": "Car-Buying Series, episode 7", "posted": "2026-07-15", "views": 638000, "likes": 164000, "comments": 12000, "url": "TODO_JAMES", "showcase": true },
+        { "caption": "Car-Buying Series, episode 4", "posted": "2026-03-16", "views": 233000, "likes": 65000, "comments": 5206, "url": "TODO_JAMES", "showcase": true },
+        { "caption": "Car-Buying Series, episode 5", "posted": "2026-05-01", "views": 156000, "likes": 29000, "comments": 3386, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "Car-Buying Series, episode 2", "posted": "2026-01-31", "views": 111000, "likes": 23000, "comments": 592, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "Car-Buying Series, episode 6", "posted": "2026-05-12", "views": 89000, "likes": 21000, "comments": 2379, "url": "TODO_JAMES", "showcase": false },
+        { "caption": "Car-Buying Series, episode 3", "posted": "2026-03-01", "views": 74000, "likes": 20000, "comments": 1706, "url": "TODO_JAMES", "showcase": false }
+      ]
+    }
+  ],
+
+  "brands": [
+    { "name": "Formula 1", "featured": true, "logo": "" },
+    { "name": "BBC", "featured": true, "logo": "" },
+    { "name": "ASUS", "featured": true, "logo": "" },
+    { "name": "Trip.com", "featured": true, "logo": "" },
+    { "name": "NOW TV", "featured": true, "logo": "" },
+    { "name": "AirBrush", "featured": true, "logo": "" },
+    { "name": "SumUp", "featured": true, "logo": "" },
+    { "name": "Dola", "displayName": "Dola (CiCi AI)", "featured": true, "repeatClient": true, "logo": "" },
+    { "name": "Desktronic", "featured": true, "logo": "" },
+    { "name": "Sony", "featured": true, "logo": "" },
+    { "name": "Synology", "featured": true, "repeatClient": true, "logo": "" },
+    { "name": "Shark", "featured": true, "logo": "" },
+    { "name": "Ninja", "featured": true, "logo": "" },
+    { "name": "Secretlab", "featured": true, "logo": "" },
+    { "name": "VO5", "featured": false, "logo": "" },
+    { "name": "Nutribullet", "featured": false, "logo": "" },
+    { "name": "FlexiSpot", "featured": false, "repeatClient": true, "logo": "" },
+    { "name": "Temu", "featured": false, "repeatClient": true, "logo": "" },
+    { "name": "Gauth", "featured": false, "logo": "" },
+    { "name": "The Oodie", "featured": false, "logo": "" },
+    { "name": "Dossier", "featured": false, "logo": "" },
+    { "name": "AliExpress", "featured": false, "logo": "" },
+    { "name": "Bambu Lab", "featured": false, "logo": "" },
+    { "name": "FIFINE", "featured": false, "logo": "" },
+    { "name": "Haier", "featured": false, "logo": "" },
+    { "name": "Tribal Chimp", "featured": false, "logo": "" },
+    { "name": "SafeWrite AI", "featured": false, "logo": "" },
+    { "name": "Sprung Gym", "featured": false, "logo": "" },
+    { "name": "Telesin", "featured": false, "logo": "" },
+    { "name": "Pela Case", "featured": false, "logo": "" },
+    { "name": "Brick", "featured": false, "logo": "" },
+    { "name": "Clipto.ai", "featured": false, "logo": "" },
+    { "name": "Animoto", "featured": false, "logo": "" },
+    { "name": "Widgify", "featured": false, "logo": "" },
+    { "name": "Divoom", "featured": false, "logo": "" },
+    { "name": "The Box Co.", "featured": false, "logo": "" },
+    { "name": "Weider", "featured": false, "logo": "" },
+    { "name": "Gear4music", "featured": false, "logo": "" },
+    { "name": "AVCOM", "featured": false, "logo": "" },
+    { "name": "AJazz", "featured": false, "logo": "" },
+    { "name": "Virtura", "featured": false, "logo": "" }
+  ],
+
+  "testimonials": [
+    {
+      "quote": "James was a dream to work with. He understood our brief instantly and delivered content that felt completely native to his audience — the campaign smashed our view targets and the engagement was some of the best we’ve seen from a creator this size.",
+      "name": "Sarah Mitchell",
+      "role": "Brand Partnerships",
+      "brand": "SumUp",
+      "logo": "TODO_JAMES",
+      "sourceUrl": "TODO_JAMES"
+    },
+    {
+      "quote": "Fast, professional and genuinely creative. James shared drafts ahead of posting, took feedback on board without any friction, and the final videos over-delivered on everything we agreed. We’d happily work with him again.",
+      "name": "Tom Bradley",
+      "role": "Marketing Manager",
+      "brand": "VO5",
+      "logo": "TODO_JAMES",
+      "sourceUrl": "TODO_JAMES"
+    },
+    {
+      "quote": "One of the easiest creator collaborations we’ve run. Clear communication from brief to final report, content that matched our brand perfectly, and real results to show for it. Highly recommend James to any brand considering a partnership.",
+      "name": "Emma Clarke",
+      "role": "Influencer Lead",
+      "brand": "Dossier",
+      "logo": "TODO_JAMES",
+      "sourceUrl": "TODO_JAMES"
+    }
+  ],
+
+  "packages": [
+    {
+      "id": "single",
+      "name": "Single TikTok",
+      "formValue": "Single TikTok",
+      "tagline": "One video, built around your product",
+      "deliverables": [
+        "One TikTok, scripted, filmed and edited by me",
+        "Product worked into a format my audience already watches",
+        "Draft shared for approval before it goes live",
+        "Performance report after posting"
+      ],
+      "price": "Rate on request"
+    },
+    {
+      "id": "bundle",
+      "name": "Multi-platform bundle",
+      "formValue": "Multi-platform bundle",
+      "tagline": "TikTok + Reels + Facebook + Shorts",
+      "highlight": true,
+      "deliverables": [
+        "One video, posted natively on TikTok, Instagram Reels, Facebook and YouTube Shorts",
+        "Captions and hooks adapted for each platform",
+        "Draft shared for approval before posting",
+        "Cross-platform performance report"
+      ],
+      "price": "Rate on request"
+    },
+    {
+      "id": "series",
+      "name": "Series / multi-video partnership",
+      "formValue": "Series / multi-video partnership",
+      "tagline": "A multi-part series people come back for",
+      "deliverables": [
+        "A multi-part series (office build, setup, transformation or everyday format) with your product at the centre",
+        "Posting schedule agreed up front",
+        "Every episode approved before it goes live",
+        "Report after each episode and at the end of the series"
+      ],
+      "price": "Rate on request"
+    }
+  ],
+
+  "addOns": [
+    { "name": "Ad codes / Spark Ads", "note": "Run my video as an ad from your account" },
+    { "name": "Usage rights", "note": "Use the video on your own channels and site" },
+    { "name": "Link in bio", "note": "Your link on my profile for the campaign period" }
+  ],
+
+  "press": [
+    { "outlet": "The Northern Echo", "headline": "TODO_JAMES", "url": "TODO_JAMES" }
+  ]
 }
