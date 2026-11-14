@@ -15,7 +15,9 @@
 <meta name="twitter:description" content="Millions of views a month across TikTok, Instagram and Facebook. Case studies, audience data and a media kit for brand partnerships."/>
 <meta name="twitter:image" content="https://theclicker.github.io/portfilo/img/james-hero.jpg"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif' fill='%23c9a96e'%3E@%3C/text%3E%3C/svg%3E"/>
-<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');
+/* Start loading the figures straight away, in parallel with the rest of the page */
+window.__stats=fetch('stats.json',{cache:'no-cache'}).then(function(r){return r.json();});</script>
 <link rel="preload" as="image" href="img/james-hero.webp" type="image/webp" media="(min-width:901px)"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -26,7 +28,7 @@
   --bg:#060606;--bg-s:#0f0f0f;--bg-c:#141414;--bg-ch:#1c1c1c;
   --border:rgba(255,255,255,0.1);--border-g:rgba(201,169,110,0.35);
   --text:#f0ece3;--text-2:#a09488;--text-3:#5a5652;
-  --gold:#c9a96e;--gold-l:#dfc083;--gold-d:rgba(201,169,110,0.12);--gold-glow:rgba(201,169,110,0.22);
+  --gold:#c9a96e;--gold-bg:#c9a96e;--gold-l:#dfc083;--gold-d:rgba(201,169,110,0.12);--gold-glow:rgba(201,169,110,0.22);
   --teal:#45d9c8;--teal-d:rgba(69,217,200,0.1);--teal-l:#6ee7d8;
   --green:#52c47a;--red:#e05c6a;
   --nav-h:68px;--r:10px;--rl:18px;--ease:cubic-bezier(0.22,1,0.36,1);--t:0.3s;
@@ -34,8 +36,8 @@
 [data-theme="light"]{
   --bg:#f5f1ea;--bg-s:#eee9e0;--bg-c:#ffffff;--bg-ch:#f9f6f0;
   --border:rgba(0,0,0,0.07);--border-g:rgba(150,110,30,0.2);
-  --text:#111010;--text-2:#7a7060;--text-3:#c8c0b0;
-  --gold:#a07828;--gold-l:#b88c2e;--gold-d:rgba(160,120,40,0.09);--gold-glow:rgba(160,120,40,0.14);
+  --text:#111010;--text-2:#645a4c;--text-3:#72685a;
+  --gold:#80601d;--gold-bg:#a07828;--gold-l:#b88c2e;--gold-d:rgba(160,120,40,0.09);--gold-glow:rgba(160,120,40,0.14);
   --teal:#006e84;--teal-d:rgba(0,110,132,0.07);--teal-l:#008aa8;--green:#287a44;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -76,7 +78,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 .mob-menu a:hover{color:var(--text)}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;min-height:44px;padding:0.7rem 1.5rem;border-radius:8px;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;transition:all var(--t) var(--ease);cursor:pointer;text-align:center}
-.btn-gold{background:var(--gold);color:#000;border:1px solid transparent}
+.btn-gold{background:var(--gold-bg);color:#000;border:1px solid transparent}
 .btn-gold:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 12px 32px var(--gold-glow)}
 .btn-outline{border:1px solid var(--border-g);color:var(--gold);background:transparent}
 .btn-outline:hover{background:var(--gold-d);border-color:var(--gold)}
@@ -389,12 +391,12 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
 .fg{display:grid;gap:0.45rem}
 .fg label{font-family:"DM Mono",monospace;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-2)}
 .fi,.fs,.ft{background:var(--bg-c);border:1px solid var(--border);border-radius:8px;padding:0.88rem 1rem;min-height:48px;font-size:0.88rem;color:var(--text);transition:border-color var(--t),box-shadow var(--t);outline:none;width:100%}
-.fi::placeholder,.fs::placeholder,.ft::placeholder{color:var(--text-3)}
+.fi::placeholder,.fs::placeholder,.ft::placeholder{color:#a39886}
 [data-theme="light"] .fi,[data-theme="light"] .fs,[data-theme="light"] .ft{background:#fff}
 .fi:focus,.fs:focus,.ft:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-d)}
 .fs{appearance:none;cursor:pointer}
 .ft{resize:vertical;min-height:120px}
-.fsub{width:100%;min-height:52px;padding:1.05rem;background:var(--gold);color:#000;border-radius:9px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:all var(--t);cursor:pointer;border:none}
+.fsub{width:100%;min-height:52px;padding:1.05rem;background:var(--gold-bg);color:#000;border-radius:9px;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:all var(--t);cursor:pointer;border:none}
 .fsub:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 14px 36px var(--gold-glow)}
 .fnote{font-family:"DM Mono",monospace;font-size:0.62rem;color:var(--text-3);text-align:center;letter-spacing:0.06em}
 /* Footer */
@@ -417,7 +419,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
   .sticky-cta.show{transform:none}
   .sticky-cta .btn{flex:1}
   .sticky-cta .mail{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:8px;border:1px solid var(--border-g);color:var(--gold);font-size:1.1rem}
-  .stt{bottom:5.2rem}
+  .stt{display:none}
   .footer{padding-bottom:6rem}
 }
 /* Responsive */
@@ -494,6 +496,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
       <div class="c-card">
         <div class="cc-bg">
           <picture>
+            <source media="(max-width:900px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
             <source srcset="img/james-hero.webp" type="image/webp"/>
             <img src="img/james-hero.jpg" width="720" height="960" alt="James Hagen" fetchpriority="high" decoding="async"/>
           </picture>
@@ -595,7 +598,7 @@ body::after{content:"";position:fixed;inset:0;background-image:url("data:image/s
       <div class="why-card">
         <div class="why-num">02</div>
         <div class="why-t">Proof at sponsored scale</div>
-        <p class="why-p"><b><span data-stat="cs:airbrush"></span> views</b> on one sponsored AirBrush video. <span data-stat="cs:sumup"></span> on one SumUp video. <span data-stat="cs:dola"></span> across eight Dola videos. The formats are tested, and the brands come back.</p>
+        <p class="why-p"><b><span data-stat="cs:airbrush"></span> views</b> on one sponsored AirBrush video. <span data-stat="cs:sumup"></span> on one SumUp video. <span data-stat="cs:dola"></span> across <span data-stat="videos:dola"></span> Dola videos. The formats are tested, and the brands come back.</p>
       </div>
       <div class="why-card">
         <div class="why-num">03</div>
@@ -754,7 +757,7 @@ document.addEventListener('click',e=>{
 /* ───────── render ───────── */
 async function loadStats(){
   let s;
-  try{ s=await (await fetch('stats.json?v='+Date.now())).json(); }
+  try{ s=await (window.__stats||fetch('stats.json',{cache:'no-cache'}).then(r=>r.json())); }
   catch(e){ console.warn('stats.json not loaded:',e); return; }
   const ov=s.overview||{}, P=s.platforms||{}, tt=P.tiktok||{}, ig=P.instagram||{}, fb=P.facebook||{}, yt=P.youtube||{}, aud=s.audience||{};
   const cases=(s.caseStudies||[]).map(c=>Object.assign({organic:false},c));
@@ -782,8 +785,10 @@ async function loadStats(){
     engagementNote: ov.engagementNote||'',
     updated: monthYear((s.meta||{}).lastUpdated), year: String(new Date().getFullYear())
   };
-  cases.concat(series).forEach(c=>{D['cs:'+c.id]=totalDisplay(c);});
+  cases.concat(series).forEach(c=>{D['cs:'+c.id]=totalDisplay(c);D['videos:'+c.id]=String((c.videos||[]).length);});
   document.querySelectorAll('[data-stat]').forEach(el=>{const v=D[el.dataset.stat];if(v!=null&&v!=='')el.textContent=v;});
+  /* Let the browser paint the headline numbers before building the heavier sections */
+  await new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));
 
   /* Ticker (two copies so the loop is seamless) */
   const tItems=[[D.monthlyViews,'Views every month'],[D.combinedFollowers,'Combined followers'],[D.tiktokER,'TikTok engagement rate'],[D.tiktokRank,'TikTok creator'],[D.topVideo,'Views on one sponsored video'],[D.tiktokViews28d,'TikTok views, last 28 days'],[D.female,'Female audience'],[D.brands,'Brand collaborations']].filter(x=>x[0]);
@@ -801,7 +806,7 @@ async function loadStats(){
   const gf=document.getElementById('gBarF'), gm=document.getElementById('gBarM');
   if(typeof aud.genderFemale==='number'){gf.style.width=aud.genderFemale+'%';gm.style.width=aud.genderMale+'%';}
   const ages=aud.ageBreakdown||{}; const maxAge=Math.max(1,...Object.values(ages));
-  document.getElementById('ageBars').innerHTML=Object.keys(ages).map(k=>'<div class="bar-row"><span class="bar-lbl">'+esc(k.replace('-','&#8211;'))+'</span><div class="bar-track"><div class="bar-fill" data-w="'+(ages[k]/maxAge*100)+'"></div></div><span class="bar-pct">'+pct(ages[k])+'</span></div>').join('');
+  document.getElementById('ageBars').innerHTML=Object.keys(ages).map(k=>'<div class="bar-row"><span class="bar-lbl">'+esc(k.replace('-','–'))+'</span><div class="bar-track"><div class="bar-fill" data-w="'+(ages[k]/maxAge*100)+'"></div></div><span class="bar-pct">'+pct(ages[k])+'</span></div>').join('');
   const geo=aud.topCountries||[]; const maxGeo=Math.max(1,...geo.map(c=>c.percent));
   document.getElementById('geoBars').innerHTML=geo.map(c=>'<div class="bar-row"><span class="bar-flag">'+esc(c.flag||'')+'</span><span class="bar-name">'+esc(c.name)+'</span><div class="bar-track"><div class="bar-fill" data-w="'+(c.percent/maxGeo*100)+'"></div></div><span class="bar-pct">'+pct(c.percent)+'</span></div>').join('');
 
@@ -834,7 +839,7 @@ async function loadStats(){
     const an='<div class="csa"><div class="csa-v"'+(c.organic?' style="color:var(--teal)"':'')+'>'+totalDisplay(c)+'</div><div class="csa-l">Total views</div></div>'
       +(likes?'<div class="csa"><div class="csa-v">'+fmt(likes)+'</div><div class="csa-l">Likes</div></div>':'')
       +(comments?'<div class="csa"><div class="csa-v">'+fmt(comments)+'</div><div class="csa-l">Comments</div></div>':'')
-      +'<div class="csa"><div class="csa-v">'+(c.episodes||vids.length)+(c.longForm&&!isTodo(c.longForm.url)?' + 1':'')+'</div><div class="csa-l">'+(c.organic?'Episodes':'Videos delivered')+'</div></div>'
+      +'<div class="csa"><div class="csa-v">'+(c.episodes||vids.length)+(c.longForm&&!isTodo(c.longForm.url)?' + 1':'')+'</div><div class="csa-l">'+(c.organic?'Episodes':((c.episodes||vids.length)===1?'Video delivered':'Videos delivered'))+'</div></div>'
       +(er?'<div class="csa"><div class="csa-v">'+er+'</div><div class="csa-l">Likes + comments &#247; views</div></div>':'');
     return '<div class="cs'+(c.organic?' organic':'')+(i===0?' open':'')+'" id="cs-'+esc(c.id)+'">'
       +'<button class="cs-head" type="button" aria-expanded="'+(i===0)+'" aria-controls="csb-'+esc(c.id)+'">'
@@ -882,8 +887,7 @@ async function loadStats(){
     +card({k:'yt',handle:yt.handle||'YouTube',name:'YouTube',big:D.ytVideoViews,bigL:'Views, first long-form video',url:yt.url,extra:(ytv.title?'<div class="soc-video">'+facade({url:ytv.url,caption:ytv.title,views:ytv.views,brand:'YouTube · '+(ytv.length||'')})+'</div>':''),foot:(ytv.note?esc(ytv.note)+' ':'')+(D.ytSubs?D.ytSubs+' subscribers':'')});
 
   /* Packages */
-  document.getElementById('pkGrid').innerHTML=(s.packages||[]).map(p=>'<div class="pk'+(p.highlight?' hl':'')+'">'+(p.highlight?'<span class="pk-flag">Most booked</span>':'')
-    +'<div><div class="pk-nm">'+esc(p.name)+'</div>'+(p.tagline?'<div class="pk-tag">'+esc(p.tagline)+'</div>':'')+'</div>'
+  document.getElementById('pkGrid').innerHTML=(s.packages||[]).map(p=>'<div class="pk'+(p.highlight?' hl':'')+'">'    +'<div><div class="pk-nm">'+esc(p.name)+'</div>'+(p.tagline?'<div class="pk-tag">'+esc(p.tagline)+'</div>':'')+'</div>'
     +'<ul class="pk-list">'+(p.deliverables||[]).map(d=>'<li>'+esc(d)+'</li>').join('')+'</ul>'
     +'<div class="pk-price">'+esc(p.price||'Rate on request')+'</div>'
     +'<a href="#contact" class="btn btn-gold" data-package="'+esc(p.formValue||p.name)+'">Enquire about this &#8594;</a></div>').join('');

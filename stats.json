@@ -127,7 +127,7 @@
       "totalViews": 5163000,
       "highlightMetric": { "label": "Videos delivered", "value": 8, "suffix": " videos" },
       "showEngagementRate": false,
-      "summary": "Eight paid videos over ten months for Dola (the ByteDance assistant app that was called CiCi AI until November 2025). Desk organising, revision, planning and budgeting formats, each built around a real use case.",
+      "summary": "Eight paid videos for Dola, the ByteDance app that was called CiCi AI until November 2025. Desk organising, revision, planning and budgeting formats, each built around a real use case.",
       "videos": [
         { "caption": "Trying to get my desk organised once and for all", "posted": "2025-10-31", "views": 2100000, "likes": 4124, "comments": 133, "url": "https://www.tiktok.com/@james_hagen/video/7567307650824916227", "showcase": true },
         { "caption": "Trying hairstyles before I make another terrible decision", "posted": "2026-06-19", "views": 1500000, "likes": 1843, "comments": 12, "url": "TODO_JAMES", "showcase": true },
@@ -172,7 +172,7 @@
       "totalViews": 3223000,
       "highlightMetric": { "label": "Videos delivered", "value": 3, "suffix": " videos" },
       "showEngagementRate": false,
-      "summary": "Three-part paid series building my dream desk setup in the new office around Desktronic's standing desk and chair, with a discount code in every video.",
+      "summary": "Three-part paid series building my dream desk setup in the new office around Desktronic's standing desk and chair, with my discount code JAMES.",
       "videos": [
         { "caption": "Part 1 of building my dream desk setup in the new office", "posted": "2026-06-17", "views": 1500000, "likes": 760, "comments": 9, "url": "https://www.tiktok.com/@james_hagen/video/7652271102680452374" },
         { "caption": "This is the big change I was talking about (standing desk)", "posted": "2026-06-23", "views": 1200000, "likes": 656, "comments": 6, "url": "https://www.tiktok.com/@james_hagen/video/7654469059806792982" },
@@ -193,7 +193,7 @@
       "totalViews": 1169000,
       "highlightMetric": { "label": "Videos delivered", "value": 2, "suffix": " videos" },
       "showEngagementRate": false,
-      "summary": "Two paid TikToks for Trip.com: an Easter day out planned with the Easter Sale, and the UK rail booking launch.",
+      "summary": "Two paid TikToks for Trip.com: an Easter day out for the Easter Sale, and UK rail travel.",
       "videos": [
         { "caption": "Me and Summer have been planning an Easter day out...", "posted": "2026-03-23", "views": 618000, "likes": 1022, "comments": 13, "url": "TODO_JAMES" },
         { "caption": "UK train travel is about to get a whole lot more...", "posted": "2026-06-29", "views": 551000, "likes": 838, "comments": 6, "url": "TODO_JAMES" }
@@ -317,9 +317,9 @@
       "totalViewsNote": "3.4M across 7 TikTok episodes plus 177K on the YouTube long-form video",
       "claimedTotal": "TODO_JAMES",
       "episodes": 7,
-      "highlightMetric": { "label": "Episodes", "value": 7, "suffix": " TikTok episodes + 1 YouTube" },
-      "showEngagementRate": true,
-      "summary": "Seven TikTok episodes about buying my first car, from the search to driving it home. The top episode hit 2.1M views. The series then carried over to YouTube as my first proper long-form video.",
+      "highlightMetric": { "label": "Likes", "value": 926000 },
+      "showEngagementRate": false,
+      "summary": "Seven TikTok episodes about buying my first car. The top episode hit 2.1M views. The series then carried over to YouTube as my first proper long-form video.",
       "longForm": {
         "platform": "YouTube",
         "title": "i bought my first car... (manual)",
@@ -421,7 +421,7 @@
         "One TikTok, scripted, filmed and edited by me",
         "Product worked into a format my audience already watches",
         "Draft shared for approval before it goes live",
-        "Performance report after 7 days"
+        "Performance report after posting"
       ],
       "price": "Rate on request"
     },
@@ -443,7 +443,7 @@
       "id": "series",
       "name": "Series / multi-video partnership",
       "formValue": "Series / multi-video partnership",
-      "tagline": "Three or more episodes people come back for",
+      "tagline": "A multi-part series people come back for",
       "deliverables": [
         "A multi-part series (office build, setup, transformation or everyday format) with your product at the centre",
         "Posting schedule agreed up front",
